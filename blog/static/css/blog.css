@@ -1,0 +1,151 @@
+/*— Variables —*/
+:root {
+  --color-primary: #f60;        /* bright orange */
+  --color-secondary: #C25100;   /* darker orange */
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-date: #828282;
+  --font-heading: 'Lobster', cursive;
+  --font-logo: 'Dancing Script', cursive;
+  --transition-speed: 0.2s;
+}
+
+/*— Global Reset —*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*— Header / Navbar —*/
+header {
+  background: var(--color-primary);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: var(--font-logo);
+  font-size: 3em;
+  transition: opacity var(--transition-speed);
+}
+
+header h1 a:hover {
+  opacity: 0.85;
+}
+
+/*— Page Header (optional alternative) —*/
+.page-header {
+  background-color: var(--color-secondary);
+  padding: 20px 40px 20px 20px;
+  margin-bottom: 40px;
+}
+
+.page-header h1,
+.page-header h1 a,
+.page-header h1 a:visited {
+  color: var(--color-text-light);
+  font-family: var(--font-heading);
+  font-size: 36pt;
+  text-decoration: none;
+}
+
+/*— Typography —*/
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+/*— Top Menu Links —*/
+.top-menu,
+.top-menu:visited {
+  color: var(--color-text-light);
+  float: right;
+  font-size: 26pt;
+  margin: 0 20px 0 0;
+  text-decoration: none;
+  transition: opacity var(--transition-speed);
+}
+
+.top-menu:hover {
+  opacity: 0.8;
+}
+
+/*— Posts List —*/
+main.container {
+  padding: 20px;
+}
+
+.post {
+  margin-bottom: 70px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+/* Date & Actions */
+.post > .date,
+.post > .actions {
+  float: right;
+}
+
+.date {
+  color: var(--color-date);
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+/* Post Title & Link */
+.post h2 a,
+.post h2 a:visited {
+  color: var(--color-text-dark);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.post h2 a:hover {
+  color: var(--color-primary);
+}
+
+/* Post Body */
+.post p {
+  margin-top: 1em;
+  line-height: 1.6;
+}
+
+/*— Buttons —*/
+.btn-secondary,
+.btn-secondary:visited {
+  color: var(--color-secondary);
+  background: none;
+  border: 1px solid var(--color-secondary);
+  margin-left: 15px;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: 
+    color var(--transition-speed),
+    background-color var(--transition-speed);
+}
+
+.btn-secondary:hover {
+  color: var(--color-text-light);
+  background-color: var(--color-secondary);
+}
+
+/*— Forms —*/
+.post-form textarea,
+.post-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+
+/*— Utility —*/
+.save {
+  float: right;
+}
